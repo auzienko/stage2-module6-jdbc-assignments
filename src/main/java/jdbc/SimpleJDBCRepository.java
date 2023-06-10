@@ -1,9 +1,7 @@
 package jdbc;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.sql.*;
@@ -14,8 +12,6 @@ import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class SimpleJDBCRepository {
 
     private static final String CREATE_USER_SQL = "INSERT INTO myusers (firstname, lastname, age) VALUES (?, ?, ?)";
