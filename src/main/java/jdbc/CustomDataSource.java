@@ -52,7 +52,7 @@ public class CustomDataSource implements DataSource {
 
     @SneakyThrows
     private static Properties getProperties() {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        ClassLoader classLoader = CustomDataSource.class.getClassLoader();
         Properties properties = new Properties();
         properties.load(classLoader.getResourceAsStream("app.properties"));
         return properties;
